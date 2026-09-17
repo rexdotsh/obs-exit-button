@@ -1,7 +1,5 @@
 #pragma once
 
-#include <obs.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
