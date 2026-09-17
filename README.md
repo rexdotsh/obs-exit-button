@@ -14,10 +14,10 @@ The plugin is built against the exact OBS and Qt dependency versions used by OBS
 ## Install
 
 1. Download the Windows ZIP from [Releases](https://github.com/rexdotsh/obs-exit-button/releases).
-2. Extract the `obs-exit-button` folder into `%APPDATA%\obs-studio\plugins`.
+2. Extract the `obs-exit-button` folder into `%PROGRAMDATA%\obs-studio\plugins`.
 3. Start OBS. The **Exit** button appears below **Settings** in the Controls dock.
 
-To uninstall, close OBS and delete `%APPDATA%\obs-studio\plugins\obs-exit-button`.
+To uninstall, close OBS and delete `%PROGRAMDATA%\obs-studio\plugins\obs-exit-button`.
 
 ## Why this implementation
 

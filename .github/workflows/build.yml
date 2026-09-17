@@ -31,12 +31,13 @@ jobs:
         run: |
           $spec = Get-Content buildspec.json -Raw | ConvertFrom-Json
           $archive = "$($spec.name)-$($spec.version)-windows-x64.zip"
+          Remove-Item "release/$($spec.name)/bin/64bit/*.pdb" -ErrorAction SilentlyContinue
           Compress-Archive -Path "release/$($spec.name)" -DestinationPath $archive
           $hash = (Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant()
           "$hash  $archive" | Set-Content "$archive.sha256"
           "archive=$archive" >> $env:GITHUB_OUTPUT
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: obs-exit-button-windows-x64
           path: |
